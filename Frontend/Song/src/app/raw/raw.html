@@ -1,0 +1,6 @@
+<div *ngFor="let song of dataService.songs$ | async">
+  <p>{{song.title}} - {{song.length}} ({{song.likes}})</p>
+</div>
+<p routerLink='/more-filter'><button class="btn btn-primary">Ide ha random zene statisztikák érdekelnek</button></p>
+<p routerLink='/song-list'><button class="btn btn-primary">Ide ha a zenék táblázatos nézete kell</button></p>
+<p routerLink='/add-song'><button class="btn btn-primary">Ide ha hozzá akarsz adni</button></p>

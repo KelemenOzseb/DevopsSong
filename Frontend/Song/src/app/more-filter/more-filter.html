@@ -1,0 +1,20 @@
+<h3>Avarage length</h3>
+<div *ngIf="getAverageLength$() | async as avg">
+    <p>{{avg}}</p>
+</div>
+<hr>
+<h3>Titles</h3>
+<div *ngFor="let titles of getTitles$() | async">
+    <p>{{titles}}</p>
+</div>
+<hr>
+<h3>Random Song</h3>
+<div *ngIf="getRandomSong$() | async as randomSong">
+    <p>{{randomSong.title}}</p>
+    <p>{{randomSong.likes}}</p>
+</div>
+<hr>
+<h3>first Song</h3>
+<div *ngIf="getFirstSong$() | async as firstSong">
+    <p>{{firstSong.title}}</p>
+</div>

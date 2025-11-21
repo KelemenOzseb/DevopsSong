@@ -1,0 +1,45 @@
+<div class="form-group">
+  <label for="art">Artist:</label>
+  <input
+    [(ngModel)]="song.artist"
+    name="artist"
+    type="text"
+    class="form-control"
+    id="art"
+  />
+</div>
+
+<div class="form-group">
+  <label for="title">Title:</label>
+  <input
+    [(ngModel)]="song.title"
+    name="title"
+    type="text"
+    class="form-control"
+    id="title"
+  />
+</div>
+
+<div class="form-group">
+  <label for="len">Length:</label>
+  <input
+    [(ngModel)]="song.length"
+    name="length"
+    type="number"
+    class="form-control"
+    id="len"
+  />
+</div>
+
+<div class="form-group">
+  <label for="lik">Likes:</label>
+  <input
+    [(ngModel)]="song.likes"
+    name="likes"
+    type="number"
+    class="form-control"
+    id="lik"
+  />
+</div>
+
+<button class="btn btn-success mt-2" (click)="createSong()">Create</button>

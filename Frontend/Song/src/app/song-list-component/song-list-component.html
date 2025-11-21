@@ -1,0 +1,18 @@
+<table class="table table-primary table-hover">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Artist</th>
+            <th>Length</th>
+            <th>Likes</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let song of songs">
+            <td>{{song.title}}</td>
+            <td>{{song.artist}}</td>
+            <td>{{song.length}}</td>
+            <td>{{song.likes}}</td>
+        </tr>
+    </tbody>
+</table>
