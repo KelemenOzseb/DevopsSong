@@ -9,7 +9,6 @@ import { HttpClient, HttpClientModule, HttpErrorResponse, provideHttpClient, wit
 import { FormsModule } from '@angular/forms';
 import { MoreFilter } from './more-filter/more-filter';
 import { SongListComponent } from './song-list-component/song-list-component';
-import { ConfigService } from './services/config-service';
 import { RouterModule } from '@angular/router';
 import { addSong } from './models/addSong';
 import { AddSongs } from './add-songs/add-songs.component';
@@ -29,12 +28,8 @@ import { AddSongs } from './add-songs/add-songs.component';
     FormsModule,
     RouterModule
   ],
-   providers: [provideHttpClient(), {
-    provide: APP_INITIALIZER,
-    useFactory: (cfg: ConfigService) => () => cfg.load(),
-    deps: [ConfigService],
-    multi: true
-  }],
+  
+  providers: [provideHttpClient()],
   bootstrap: [App]
 })
 export class AppModule { }
