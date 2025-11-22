@@ -34,7 +34,7 @@ namespace Endpoints.Controllers
         {
             await _repository.DeleteById(id);
             return Ok();
-        }
+        } //ez csak ellenőrzésnek
     }
 }
 
