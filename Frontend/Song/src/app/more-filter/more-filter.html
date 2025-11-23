@@ -11,10 +11,12 @@
 <h3>Random Song</h3>
 <div *ngIf="getRandomSong$() | async as randomSong">
     <p>{{randomSong.title}}</p>
-    <p>{{randomSong.likes}}</p>
 </div>
 <hr>
 <h3>first Song</h3>
 <div *ngIf="getFirstSong$() | async as firstSong">
     <p>{{firstSong.title}}</p>
+</div>
+<div class="container">
+    <button class="btn btn-primary" routerLink="/raw">Vissza a főoldalra</button>
 </div>
