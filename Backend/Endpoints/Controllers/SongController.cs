@@ -28,6 +28,13 @@ namespace Endpoints.Controllers
             await _repository.Create(song);
             return Ok();
         }
+
+        [HttpDelete]
+        public async Task<IActionResult> DeleteSong(string id)
+        {
+            await _repository.DeleteById(id);
+            return Ok();
+        } //ez csak ellenőrzésnek
     }
 }
 
