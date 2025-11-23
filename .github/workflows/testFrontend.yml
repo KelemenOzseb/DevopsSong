@@ -11,7 +11,7 @@ jobs:
     env:
       APP_DIR: Frontend/Song
       DIST_DIR: Frontend/Song/dist/Song/browser
-      REMOTE_BASE: /var/frontend
+      REMOTE_BASE: /var/frontend/test
       REMOTE_RELEASES: /var/frontend/test/releases
       REMOTE_CURRENT: /var/frontend/test/current
       BACKEND_URL: https://test.api.devopsfeleves.com/api/Song
