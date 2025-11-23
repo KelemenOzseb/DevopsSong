@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { Song} from '../models/song';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { addSong } from '../models/addSong';
 import { environment } from '../environments/environment';
 
@@ -34,6 +34,16 @@ export class dataService {
       console.log("Song successfully added!")
     },
     error: (err) => console.error("Error adding song:", err)
+  })
+  }
+
+  deleteSong(id: string): void{
+    this.http.delete(`${environment.backendUrl}/${id}` ).subscribe({
+       next: () => {
+      this.getSongs()
+      console.log("Song successfully deleted!")
+    },
+    error: (err) => console.error("Error delete song:", err)
   })
   }
   

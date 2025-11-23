@@ -22,4 +22,8 @@ export class SongListComponent implements OnInit{
       }
     })
   }
+
+  deleteSong(id: string):void {
+    this.dataService.deleteSong(id)
+  }
 }
