@@ -14,7 +14,7 @@ jobs:
       REMOTE_BASE: /var/frontend
       REMOTE_RELEASES: /var/frontend/releases
       REMOTE_CURRENT: /var/frontend/current
-      BACKEND_URL: https://api.devopsfeleves.com
+      BACKEND_URL: https://api.devopsfeleves.com/api/Song
       SSH_HOST: devopsfeleves.com
       SSH_USER: root
 
