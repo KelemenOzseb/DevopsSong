@@ -17,6 +17,7 @@ export class AddSongs {
 
   createSong(): void{
     this.dataService.addSong(this.song)
+    this.song = new addSong("", "", 0, 0)
     console.log(this.song.artist)
   }
 }

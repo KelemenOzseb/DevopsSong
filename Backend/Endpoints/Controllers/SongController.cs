@@ -29,7 +29,7 @@ namespace Endpoints.Controllers
             return Ok();
         }
 
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteSong(string id)
         {
             await _repository.DeleteById(id);
